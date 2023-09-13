@@ -38,7 +38,7 @@
    
 2. Buatlah bagan yang berisi request client ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan antara urls.py, views.py, models.py, dan berkas html.
    
-   ![Bagan request Client](image-2.png)
+   ![Bagan request Client](INGLES.png)
 
 3. Jelaskan mengapa kita menggunakan virtual environment? Apakah kita tetap dapat membuat aplikasi web berbasis Django tanpa menggunakan virtual environment?
 
@@ -122,7 +122,9 @@
         dalam pengembangan aplikasi berbasis antarmuka pengguna (UI), seperti aplikasi mobile atau desktop, 
         dan membantu memisahkan logika bisnis dari tampilan degan lebih baik.
 
-        ![Bagan Model View ViewModel](image-1.png)
+        
+
+        ![Bagan Model viewModel](image-1.png)
 
 -> Kesimpulan
    Perbedaan utama antara ketiganya adalah bagaimana masing masing model mengatur aliran data dan tindakan  
