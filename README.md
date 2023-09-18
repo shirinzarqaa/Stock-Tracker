@@ -1,5 +1,6 @@
 **Link website**: https://stocktracker.adaptable.app/
-
+<details>
+<summary> TUGAS 2</summary>
 # 1. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
 - membuat direktori baru dapat menggunakan command prompt dengan mkdir / membuat folder langsung di laptop
 - pada saat sudah cd ke directory StockTracker buat virtual environtment dengan menjalankan di command prompt
@@ -36,7 +37,6 @@
 
    
 
-   
 # 2. Buatlah bagan yang berisi request client ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan antara urls.py, views.py, models.py, dan berkas html.
    
 ![Bagan request client](INGLES.jpg)
@@ -99,6 +99,107 @@ MVVM memisahkan tugas Controller dalam MVX dengan menggunakan ViewModel. Hal ini
 
 
 ### Kesimpulan
-Perbedaan utama antara ketiganya adalah bagaimana masing masing model mengatur aliran data dan tindakan dalam aplikasi. 
-     
+Perbedaan utama antara ketiganya adalah bagaimana masing masing model mengatur aliran data dan tindakan dalam aplikasi.
+</details> 
+
+<details>
+<summary> TUGAS 3 </summary>
+
+# 1. Apa perbedaan antara form POST dan form GET dalam Django?
+## Metode Pengiriman Data
+- **Form POST**
+Data dikirim sebagai bagian dari tubuh permintaan HTTP. Data ini tidak terlihat dalam URL dan biasanya digunakan untuk mengirim data sensitif seperti kata sandi atau data yang panjang.
+- **Form GET**
+Data dikirimkan sebagai parameter yang terlihat dalam URL.Ini biasanya digunakan untuk mengambil data dari server dengan cara yang bersifat idempoten.
+## Tampilan data pada URL
+- **Form POST**
+Data tidak terlihat pada URL sehingga lebih aman dan tidak terbaca oleh pengguna yang melihat histori peramban atau log server.
+- **Form GET**
+Data terlihat pada URL dan dapat terlihat oleh siapa saja yang melihat URL.
+## Jumlah data yang bisa dikirim
+- **Form POST**
+Dapat mengirimkan jumlah data yang lebih besar deng form POST karena data dikirim sebagai bagian dari tubuh permintaan HTTP.
+- **Form GET**
+Terdapat batasan pada jumlah data yang dapat dikirimkan dengn form GET karena data harus ditambahkan ke dalam URL. 
+## Keamanan
+- **Form POST**
+Lebih aman untuk mengirim data sensitif karena data tidak terlihat pada URL dan tidak terjadi pencurian data melalui URL
+- **Form GET**
+Lebih tidak aman untuk data sensitif karena data terlihat pada URL dan dapat dengan mudah diakses oleh pihak ketiga
+
+
+# 2. Apa perbedaan utama antara XML, JSON, dan HTML dalam konteks pengiriman data?
+## Struktur dan Notasi
+- **XML**
+memiliki sintaks yang lebih kaku dan kompleks dibandingkan JSON dan HTML. XML biasanya digunakan untuk pertukaran data yang terstruktur dengan tipe data yang didefinisikan sendiri.
+- **JSON**
+memiliki format yang lebih ringan dan mudah dibaca dengan menggunakan pasangan nama/kunci dan nilai.
+- **HTML**
+Bahasa markup khusus untuk membuat dokumen web dan digunakan untuk merancang tampilan serta struktur web, bukan untuk pertukaran data mentah
+## Tujuan Utama
+- **XML**
+Digunakan untuk pertukaran data terstruktur yang kompleks antara sistem yang berbeda.
+- **JSON**
+Digunakan untuk pertukaran data ringan, terutama dalam konteks pengembangan web dan API.
+- **HTML**
+Digunakan untuk membuat tampilan halaman web dan mengatur tampilan konten.
+## Flexibility
+- **XML**
+Lebih fleksibel dalam hal mendefinisikan struktur data yang kustom. Anda dapat membuat skema XML sesuai dengan kebutuhan Anda.
+- **JSON**
+Lebih sederhana dalam hal struktur dan lebih cocok untuk data yang berurutan atau hirarkis, seperti daftar atau objek bersarang.
+- **HTML**
+Lebih terbatas pada tampilan halaman web, dengan struktur yang telah ditentukan seperti elemen <div>, <p>, atau <table>.
+## Mendukung tipe data
+- **XML**
+Dukungan yang lebih baik untuk tipe data yang kompleks melalui skema XML.
+- **JSON**
+Mendukung tipe data yang sederhana seperti string, angka, boolean, array dan objek.
+- **HTML**
+Tidak dirancang untuk menyimpan data dalam tipe data yang berarti karena digunakan untuk merancang tampilan web.
+
+# 3. Mengapa JSON sering digunakan dalam pertukaran data antara aplikasi web modern?
+- Memiliki format yang ringan dan mudah dibaca oleh manusia dengan cara menggabungkan pasangan nama/kunci dan nilai yang sederhana dalam struktur yang intuitif.
+- sangat mudah di integrasikan denga kode JavaScript.
+- Dapat dengan mudha mengonversi data JSON kedalam objek atau struktur data yang sesuai degan bahasa pemrograman yang digunakan server atau klien.
+- memiliki format terbuka dan tidak memiliki ketergantungan pada platform tertentu.
+- mendukung tipe data yang umum digunakan.
+- JSON dapat digunakan untuk mengirim berbagai jenis konten
+- Dapat digunakan untuk mengirim data dari server ke klien begitupun sebaliknya.
+- memiliki format yang cocok untuk digunakan dalam API REST.
+# 4. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
+- Menjalankan virtual environtment
+- mengubah path pada StockTracker di file urls.py menjadi 
+urlpatterns = [
+path('', include('main.urls')),
+path('admin/', admin.site.urls),
+]
+- membuat folder templates dan membuat file base.html dan di isi
+- mengubah 'DIRS': [BASE_DIR / 'templates'], pada subdirektori stocktracker di setting.py
+- membuat berkas baru degan nama forms.py dan menyesuaikan strukturnya
+- pada berkas views.py di folder main import 
+from django.http import HttpResponseRedirect
+from main.forms import ProductForm
+from django.urls import reverse
+
+dan menambah fungsi create_product yang menerima parameter request
+- mengubah fungsi show_main pada berkas views.py dengan menambahkan products = Product.objects.all() dan 'products': products di dalam context pada fungsi 
+- menambahkan import fungsi create product pada urls.py di folder main
+- menambahkan path url ke urlpatterns pada urls.py di main
+- buat berkas baru create_product.html pada direktori main/templates dan mengisi kode sesuai dengan keinginan soal
+- menambahkan kode {% block content %} pada main.html
+- mengembalikan data dalam bentuk xml dengan mengimport httpResponse dan Serialize pada views.py dan membuat fungsi sho_xml dengan parameter request dan menambahkan return function
+- mengimport fungsi yang sudah di buat pada urls.py di folder main dan menambahkan path url kedalam urlpatterns
+- mengembalikan data dalam bentuk json dengn membuat fungsi show_json yang menerima parameter request en menyimpan variabel di data , setelah otu tambahkan return function berupa httpResponse dan mengimport show_json pada urls.py di folder main , setelah itu path juga ditambahkan
+- mengembalikan data berdasarkan id dalam bentuk XML dan JSON dengan cara membuat fungsi show_xml_by_id dan show_json_by_id pafa views.py di folder main , setelah itu membuat variabel fungsi dengan menyimpan hasil query dengan id tertentu. setelah itu menambahkan return function berupa HttpResponse yang berisi padara data hasil query yang sudah diserialisasi dan parameter content_type dengan value "application/xml" (untuk format XML) atau "application/json" (untuk format JSON).
+- mengimport fungsi yang tadi di buat di file urls.py pada folder main dan menambahkan path url ke dalam urlpatterns.
+- melakukan deployment
+# 5. Mengakses kelima URL di poin 2 menggunakan Postman, membuat screenshot dari hasil akses URL pada Postman, dan menambahkannya ke dalam README.md.
+![json-id hasil akses](json-id.jpeg)
+![json hasil akses](json.jpeg)
+![xml-id hasil akses](xml-id.jpeg)
+![xml hasil akses](xml.jpeg)
+![localhost hasil akses](localhost.jpeg)
+
+</details>  
 
