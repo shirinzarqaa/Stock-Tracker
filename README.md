@@ -103,7 +103,7 @@ Perbedaan utama antara ketiganya adalah bagaimana masing masing model mengatur a
 </details> 
 
 <details>
-<summary> TUGAS 3 </summary>
+<summary> TUGAS 3 & TUGAS 4 </summary>
 
 # 1. Apa perbedaan antara form POST dan form GET dalam Django?
 ## Metode Pengiriman Data
