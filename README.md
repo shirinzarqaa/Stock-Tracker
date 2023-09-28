@@ -294,11 +294,11 @@ Jika aplikasi anda rentan terhadap serangan XSS, penyerang dapat mencuri cookies
 - **Universal Selector (*)** 
 Menggambarkan semua elemen dalam halaman HTML. Sebaiknya digunakan dengan sangat hati-hati, karena dapat memengaruhi semua elemen di halaman. Umumnya digunakan untuk menetapkan properti default di seluruh halaman.
 - **Type Selector (element)**
-Menggambarkan semua elemen dengan jenis tertentu. Cocok digunakan ketika Anda ingin menerapkan gaya tertentu pada semua elemen dari jenis yang sama (misalnya, semua <h1>).
+Menggambarkan semua elemen dengan jenis tertentu. Cocok digunakan ketika kita ingin menerapkan gaya tertentu pada semua elemen dari jenis yang sama (misalnya, semua <h1>).
 - **Class Selector (.class)**
 Menggambarkan elemen yang memiliki atribut class tertentu. Berguna untuk menetapkan gaya pada beberapa elemen yang memiliki class yang sama.
 - **ID Selector (#id)**
-Menggambarkan elemen dengan atribut id tertentu. Harus digunakan dengan unik, karena id harus unik dalam satu halaman. Cocok untuk menargetkan elemen tertentu.
+Menggambarkan elemen dengan atribut id tertentu dan Harus digunakan dengan unik, karena id harus unik dalam satu halaman dan harus cocok untuk menargetkan elemen tertentu.
 - **Descendant Selector (ancestor descendant)**
 Menggambarkan elemen yang merupakan turunan dari elemen lain. Berguna untuk menetapkan gaya kepada elemen dalam konteks tertentu.
 - **Child Selector (parent > child)**
@@ -322,9 +322,9 @@ Digunakan untuk menentukan bagian bawah (footer) dari sebuah dokumen atau bagian
 
 # Jelaskan perbedaan antara margin dan padding.
 - **Margin**
-Margin adalah ruang di sekitar elemen HTML. Ini menciptakan jarak antara elemen dan elemen lain di luarnya. Margin tidak memiliki warna latar belakang dan biasanya digunakan untuk mengatur jarak antara elemen-elemen.
+Margin adalah ruang di sekitar elemen HTML. Hal ini, menciptakan jarak antara elemen dan elemen lain di luarnya sehingga tidak memiliki warna latar belakang dan biasanya digunakan untuk mengatur jarak antara elemen-elemen.
 - **Padding**
-Padding adalah ruang di dalam elemen HTML, antara batas elemen dan kontennya sendiri. Padding biasanya memiliki warna latar belakang yang sama dengan elemen itu sendiri dan digunakan untuk mengatur jarak antara konten dan batas elemen.
+Padding adalah ruang di dalam elemen HTML, antara batas elemen dan kontennya sendiri dan Padding biasanya memiliki warna latar belakang yang sama dengan elemen itu sendiri sehingga digunakan untuk mengatur jarak antara konten dan batas elemen.
 
 # Jelaskan perbedaan antara framework CSS Tailwind dan Bootstrap. Kapan sebaiknya kita menggunakan Bootstrap daripada Tailwind, dan sebaliknya? 
 
@@ -332,21 +332,21 @@ Padding adalah ruang di dalam elemen HTML, antara batas elemen dan kontennya sen
 
 **Tailwind CSS**
 
-Pendekatan utility-first, yang berarti Anda membangun tampilan dengan menggabungkan kelas-kelas utilitas yang telah ada.
-Fleksibel dan memungkinkan penyesuaian yang tinggi.
-Tidak memiliki desain visual bawaan, memberikan kebebasan lebih besar dalam desain.
-Cocok untuk proyek-proyek yang membutuhkan desain yang sangat kustom dan kecil dalam hal ukuran file CSS.
+- Pendekatan utility-first, yang berarti kita dapat membangun tampilan dengan menggabungkan kelas-kelas utilitas yang telah ada.
+- Fleksibel dan memungkinkan penyesuaian yang tinggi.
+- Tidak memiliki desain visual bawaan, memberikan kebebasan lebih besar dalam desain.
+- Cocok untuk proyek-proyek yang membutuhkan desain yang sangat kustom dan kecil dalam hal ukuran file CSS.
 
 **Bootstrap**
 
-Lebih memiliki desain visual bawaan dengan gaya UI yang sudah ditentukan.
-Memiliki komponen-komponen UI yang siap digunakan.
-Cocok untuk proyek dengan waktu pengembangan yang singkat dan memerlukan desain yang konsisten.
-Lebih mudah digunakan bagi pengembang pemula.
+- Lebih memiliki desain visual bawaan dengan gaya UI yang sudah ditentukan.
+- Memiliki komponen-komponen UI yang siap digunakan.
+- Cocok untuk proyek dengan waktu pengembangan yang singkat dan memerlukan desain yang konsisten.
+- Lebih mudah digunakan bagi pengembang pemula.
 
 ## Kapan Menggunakan Bootstrap atau Tailwind
-**Gunakan Bootstrap** jika Anda ingin cepat membangun situs dengan desain yang konsisten dan tidak memiliki banyak waktu untuk menyesuaikan tampilan.
-**Gunakan Tailwind CSS** jika Anda ingin tingkat kontrol yang tinggi atas desain dan siap untuk menghabiskan waktu lebih dalam menyesuaikan tampilan Anda. Cocok untuk proyek- proyek yang membutuhkan desain yang sangat kustom.
+- **Gunakan Bootstrap** jika ingin cepat membangun situs dengan desain yang konsisten dan tidak memiliki banyak waktu untuk menyesuaikan tampilan.
+- **Gunakan Tailwind CSS** jika ingin memiliki tingkat kontrol yang tinggi atas desain dan siap untuk menghabiskan waktu lebih dalam menyesuaikan tampilan yan di inginan. hal ini, Cocok untuk proyek-proyek yang membutuhkan desain yang sangat kustom.
 </details>
 
 
