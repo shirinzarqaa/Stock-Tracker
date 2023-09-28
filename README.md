@@ -103,7 +103,7 @@ Perbedaan utama antara ketiganya adalah bagaimana masing masing model mengatur a
 </details> 
 
 <details>
-<summary> TUGAS 3 & TUGAS 4 </summary>
+<summary> TUGAS 3</summary>
 
 # 1. Apa perbedaan antara form POST dan form GET dalam Django?
 ## Metode Pengiriman Data
@@ -200,8 +200,7 @@ dan menambah fungsi create_product yang menerima parameter request
 ![xml-id hasil akses](xml-id.jpeg)
 ![xml hasil akses](xml.jpeg)
 ![localhost hasil akses](localhost.jpeg)
-
-</details>  
+</details> 
 
 <details>
 <summary> TUGAS 4 </summary>
@@ -284,11 +283,70 @@ Jika aplikasi anda rentan terhadap serangan XSS, penyerang dapat mencuri cookies
 -  menambahkan model product  user = models.ForeignKey(User, on_delete=models.CASCADE)
 -  merevisi code pada fungsi create_product di file views.py di subdirektori main dan merevisi fungsi show_main
 -  melakukan python manage.py makemigrations dan python manage.py migrate
-
 - menambahkan 2 user dan 3 product
-
-
-
 </details> 
+
+<details>
+<summary> TUGAS 5 </summary>
+
+# Jelaskan manfaat dari setiap element selector dan kapan waktu yang tepat untuk menggunakannya.
+- **Universal Selector (*)** 
+Menggambarkan semua elemen dalam halaman HTML. Sebaiknya digunakan dengan sangat hati-hati, karena dapat memengaruhi semua elemen di halaman. Umumnya digunakan untuk menetapkan properti default di seluruh halaman.
+- **Type Selector (element)**
+Menggambarkan semua elemen dengan jenis tertentu. Cocok digunakan ketika Anda ingin menerapkan gaya tertentu pada semua elemen dari jenis yang sama (misalnya, semua <h1>).
+- **Class Selector (.class)**
+Menggambarkan elemen yang memiliki atribut class tertentu. Berguna untuk menetapkan gaya pada beberapa elemen yang memiliki class yang sama.
+- **ID Selector (#id)**
+Menggambarkan elemen dengan atribut id tertentu. Harus digunakan dengan unik, karena id harus unik dalam satu halaman. Cocok untuk menargetkan elemen tertentu.
+- **Descendant Selector (ancestor descendant)**
+Menggambarkan elemen yang merupakan turunan dari elemen lain. Berguna untuk menetapkan gaya kepada elemen dalam konteks tertentu.
+- **Child Selector (parent > child)**
+Menggambarkan elemen yang adalah anak langsung dari elemen lain. Berguna untuk menargetkan elemen yang merupakan anak langsung dari elemen tertentu.
+
+# Jelaskan HTML5 Tag yang kamu ketahui.
+- **<header>**
+Digunakan untuk menentukan bagian atas (header) dari sebuah dokumen atau bagian dari sebuah halaman web.
+- **<nav>** 
+Menggambarkan bagian navigasi dari sebuah halaman web.
+- **<main>**
+Menandakan konten utama dalam sebuah halaman web.
+- **<section>**
+Digunakan untuk mengelompokkan konten yang terkait dalam sebuah halaman.
+- **<article>**
+Menggambarkan konten independen yang dapat berdiri sendiri, seperti artikel berita.
+- **<aside>**
+Menggambarkan konten yang terkait dengan konten sekitarnya, seperti sidebar.
+- **<footer>**
+Digunakan untuk menentukan bagian bawah (footer) dari sebuah dokumen atau bagian dari sebuah halaman web.
+
+# Jelaskan perbedaan antara margin dan padding.
+- **Margin**
+Margin adalah ruang di sekitar elemen HTML. Ini menciptakan jarak antara elemen dan elemen lain di luarnya. Margin tidak memiliki warna latar belakang dan biasanya digunakan untuk mengatur jarak antara elemen-elemen.
+- **Padding**
+Padding adalah ruang di dalam elemen HTML, antara batas elemen dan kontennya sendiri. Padding biasanya memiliki warna latar belakang yang sama dengan elemen itu sendiri dan digunakan untuk mengatur jarak antara konten dan batas elemen.
+
+# Jelaskan perbedaan antara framework CSS Tailwind dan Bootstrap. Kapan sebaiknya kita menggunakan Bootstrap daripada Tailwind, dan sebaliknya? 
+
+## Perbedaan antara CSS Framework Tailwind dan Bootstrap
+
+**Tailwind CSS**
+
+Pendekatan utility-first, yang berarti Anda membangun tampilan dengan menggabungkan kelas-kelas utilitas yang telah ada.
+Fleksibel dan memungkinkan penyesuaian yang tinggi.
+Tidak memiliki desain visual bawaan, memberikan kebebasan lebih besar dalam desain.
+Cocok untuk proyek-proyek yang membutuhkan desain yang sangat kustom dan kecil dalam hal ukuran file CSS.
+
+**Bootstrap**
+
+Lebih memiliki desain visual bawaan dengan gaya UI yang sudah ditentukan.
+Memiliki komponen-komponen UI yang siap digunakan.
+Cocok untuk proyek dengan waktu pengembangan yang singkat dan memerlukan desain yang konsisten.
+Lebih mudah digunakan bagi pengembang pemula.
+
+## Kapan Menggunakan Bootstrap atau Tailwind
+**Gunakan Bootstrap** jika Anda ingin cepat membangun situs dengan desain yang konsisten dan tidak memiliki banyak waktu untuk menyesuaikan tampilan.
+**Gunakan Tailwind CSS** jika Anda ingin tingkat kontrol yang tinggi atas desain dan siap untuk menghabiskan waktu lebih dalam menyesuaikan tampilan Anda. Cocok untuk proyek- proyek yang membutuhkan desain yang sangat kustom.
+
+</details>
 
 
