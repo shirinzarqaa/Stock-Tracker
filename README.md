@@ -1,4 +1,5 @@
 **Link website**: https://stocktracker.adaptable.app/
+**notes** : tugas 4 sampai selanjutnya summarynya ada di dalam tugas 3 
 <details>
 <summary> TUGAS 2</summary>
 # 1. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
