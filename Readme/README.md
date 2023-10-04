@@ -347,6 +347,19 @@ Padding adalah ruang di dalam elemen HTML, antara batas elemen dan kontennya sen
 ## Kapan Menggunakan Bootstrap atau Tailwind
 - **Gunakan Bootstrap** jika ingin cepat membangun situs dengan desain yang konsisten dan tidak memiliki banyak waktu untuk menyesuaikan tampilan.
 - **Gunakan Tailwind CSS** jika ingin memiliki tingkat kontrol yang tinggi atas desain dan siap untuk menghabiskan waktu lebih dalam menyesuaikan tampilan yan di inginan. hal ini, Cocok untuk proyek-proyek yang membutuhkan desain yang sangat kustom.
+
+# jelaskan bagaimana kamu mengimplementasikan checklist
+- Pahami templat HTML yang sudah ada. dengan membagi ke beberapa bagian div 
+
+- gunakan CSS biasa untuk customisasi sederhana dan gunakan Bootstrap untuk membuat navbar dan card
+
+- Kustomisasi halaman login dan register dengan elemen-elemen Bootstrap seperti form dan tombol.
+
+- Kustomisasi halaman daftar inventori dengan Cards dari Bootstrap untuk tampilan yang lebih menarik.
+
+- Sesuaikan warna, gaya, dan responsivitas desain sesuai dengan tema yang saya pilih .
+
+- mengecheck hasil pada local host 
 </details>
 
 
