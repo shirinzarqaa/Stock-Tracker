@@ -347,6 +347,168 @@ Padding adalah ruang di dalam elemen HTML, antara batas elemen dan kontennya sen
 ## Kapan Menggunakan Bootstrap atau Tailwind
 - **Gunakan Bootstrap** jika ingin cepat membangun situs dengan desain yang konsisten dan tidak memiliki banyak waktu untuk menyesuaikan tampilan.
 - **Gunakan Tailwind CSS** jika ingin memiliki tingkat kontrol yang tinggi atas desain dan siap untuk menghabiskan waktu lebih dalam menyesuaikan tampilan yan di inginan. hal ini, Cocok untuk proyek-proyek yang membutuhkan desain yang sangat kustom.
+
+## jelaskan bagaimana kamu mengimplementasikan checklist
+- Pahami templat HTML yang sudah ada. dengan membagi ke beberapa bagian div
+- gunakan CSS biasa untuk customisasi sederhana dan gunakan Bootstrap untuk membuat navbar dan card
+- Kustomisasi halaman login dan register dengan elemen-elemen Bootstrap seperti form dan tombol.
+- Kustomisasi halaman daftar inventori dengan Cards dari Bootstrap untuk tampilan yang lebih menarik.
+- Sesuaikan warna, gaya, dan responsivitas desain sesuai dengan tema yang saya pilih .
+- mengecheck hasil pada local host
+
+</details>
+
+<details>
+<summary>Tugas 6</summary>
+
+# Jelaskan perbedaan antara asynchronous programming dengan synchronous programming.
+
+**Synchoronous Programming**
+- Secara pengertian synchronous programming adalah paradigma pemrograman dimana tugas-tugas dieksekusi satu per satu dalam urutan yang ditentukan.Hal ini menjelaskan bahwa suatu tugas harus menunggu hingga tugas sebelumnya selesai sebelum bisa dieksekusi sehingga program akan berjalan secara berurutan dan dapat memblokir eksekusi program jika ada operasi yang memakan waktu.
+**Asynchronous Programming**
+- Secara pengertian Asynchronous programming adalah paradigma pemrograman dimana tugas - tugas dapat dieksekusi tanpa harus menunggu tugas sebelumnya selesai sehingga memungkinkan program untuk terus berjalan tanpa terblokir oleh operasi yang memakan waktu. Pemrograman asinkron juga sering digunakan untuk menangani tugas tugas seperti I/O, jaringan, atau permintaan HTTP yang mungkin memerlukan waktu yang lama untuk menyelesaikannya.
+
+# Dalam penerapan JavaScript dan AJAX, terdapat penerapan paradigma event-driven programming. Jelaskan maksud dari paradigma tersebut dan sebutkan salah satu contoh penerapannya pada tugas ini.
+
+Paradigma event-driven programming adalah pendekatan pemrograman dimana program merespon peristiwa yang terjadi seperti interaksi pengguna , input data , atau perubahan keadaan tertentu. Dalam javaScrpit dan AJAX, hal ini mengacu pada penggunaan ecent listeners untuk menanggapi peristiwa seperti klik mouse, pengiriman formulir , atau permintaan data dari server.Contohnya, jika kita memiliki tombol yang dapat membuka sebuah modal dengan form untuk menambahkan item dalam suatu html , kita dapat menambahkan event listener untuk mengirimkan data ke server ketika tombol tersebut di klik.
+# Jelaskan penerapan asynchronous programming pada AJAX.
+
+Ajax (Asynchronous JavaSript and XML) secara eksplisit menggunakan pemrograman asinkron. ketika kita melakukan permintaan HTTP ke server menggunakan AJAX, kita tiharus menunggu respons dari server sebelum melanjutkan dengan eksekusi program. Sebaliknya, kita dapat menentukan callback function yang akan dipanggil ketika respons dari server tiba. Hal ini memungkinkan tampilan web kita tetap responsif sambil menunggu data dari server.
+
+# Pada PBP kali ini, penerapan AJAX dilakukan dengan menggunakan Fetch API daripada library jQuery. Bandingkanlah kedua teknologi tersebut dan tuliskan pendapat kamu teknologi manakah yang lebih baik untuk digunakan.
+- **Fetch API**
+Fetch API adalh API bawaan dari JavaSript yang digunakan untuk melakukan permintaan HTTP asinkron. Hal ini adalah pendekatan modern yang lebih ringan dan lebih fleksibel daripada jQuery. Fetch API memiliki dukungan untuk Promise, yang membuat penanganan error dan chaining lebih mudah dipahami sehingga hal ini lebih cocok untuk proyek-proyek yang lebih baru dan berfokus pada performa.
+- **JQuery**
+JQuery merupakan library JavaSript yang telah ada sejak lama dan menyediakan fungsi-gungsi yang mudah digunakan untuk berinteraksi dengan DOM dan melakukan AJAX. Namun, jQuery memiliki ukuran yang lebih besar dan mungkin berlebihan jika kita hanya memerlukan untuk AJAX. Seiring berjalannya waktu, penggunaan jQuery telah menurun karena pengembangan standar JavaSript telah berkembang.
+
+Oleh karena itu , menurut saya untuk memulai proyek baru sebaiknya menggunakan Fetch API atau teknologi modern lainnya daripada jQuery, karena hal ini akan mengurangi kebutuhan akan dependensi eksternal dan meningkatkan performa suatu aplikasi.
+
+# Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
+1. membuat fungsi untuk mengembalikan data JSON
+   def get_product_json(request):
+    product_item = Product.objects.all()
+    return HttpResponse(serializers.serialize('json', product_item))
+2. membuat fungsi menambahkan produk dengan AJAX
+3. menambahkan routing untuk fungsi get_product_json dan add_product_ajax
+4. menampilkan data product dengan Fetch API
+   <div id="product_table"></div>
+   <script>
+    async function getProducts() {
+        return fetch("{% url 'main:get_product_json' %}").then((res) => res.json())
+    }
+   </script>
+5. membuat fungsi pada AJAX product dan menambahkan modal di sebagai card dilengkapi dengan ajax add product , increment product , decrement , remove 
+   <script>
+      async function getProducts() {
+         return fetch("{% url 'main:get_product_json' %}").then((res) => res.json())
+      }
+
+      async function refreshProducts() {
+         document.getElementById("product_table").innerHTML = ""
+         const products = await getProducts()
+         let htmlString = `<div class="card-container">`
+         products.forEach((item, index) => {
+               htmlString += `\n
+               <div class="card" style="width: 22rem; padding:1%;margin-left: 30px; padding-left:10 px padding-bottom:10px; padding-right: 10px ;">
+                  <div class="card-body ">
+                     <h5 class="card-title">${ item.fields.name }</h5>
+                     <p class="card-text">
+                           <table>
+                              <tr class="add-colortext">
+                                 <td>Price</td>
+                                 <td>${ item.fields.price }</td>
+                              </tr>
+                              <tr class="add-colortext">
+                                 <td>Amount</td>
+                                 <td>${ item.fields.amount }</td>
+                              </tr>
+                              <tr class="add-colortext">
+                                 <td>Description</td>
+                                 <td>${ item.fields.description }</td>
+                              </tr>
+                              <tr class="add-colortext">
+                                 <td>Date Added</td>
+                                 <td>${ item.fields.date_added }</td>
+                              </tr>
+                           </table>
+                           <table>
+                              <tr class="add-colortext">
+                                 <td>
+                                       <form action="add_product/${item.pk}/" method="post">
+                                          {% csrf_token %}
+                                          <button class="font-bold py-1 px-4 rounded edit-button border-0"
+                                             style="color: rgb(0, 0, 0); font-weight: bolder; align-items: center" type="submit"
+                                             name="Tambah" style="padding: 10px 20px;" onclick="incrementAmount(${item.pk})">
+                                             +
+                                          </button>
+                                       </form>
+                                 </td>
+                                 <td>
+                                       <form action="decrement_product/${item.pk}/" method="post">
+                                          {% csrf_token %}
+                                          <button class="font-bold py-1 px-4 rounded edit-button border-0"
+                                             style="color: rgb(0, 0, 0); font-weight: bolder; align-items: center" type="submit"
+                                             name="Kurang" style="padding: 10px 20px;" onclick="decrementAmount(${item.pk})">
+                                             -
+                                          </button>
+                                       </form>
+                                 </td>
+                                 <td>
+                                       <form action="remove_product/${item.pk}/" method="post">
+                                          {% csrf_token %}
+                                          <button class="font-bold py-1 px-4 rounded edit-button border-0"
+                                             style="color: red; align-items: center" type="submit" name="Hapus" class="edit-button"
+                                             style="padding: 10px 20px;" onclick="deleteProduct(${item.pk})">
+                                             delete
+                                          </button>
+                                       </form>
+                                 </td>
+                                 <td>
+                                       <a href="edit-product/${item.pk}">
+                                          <button class="font-bold py-1 px-4 rounded edit-button border-0" style="padding: 10px 20px;">
+                                             Edit
+                                          </button>
+                                       </a>    
+                                 </td>
+                              </tr>
+                           </table>
+                     </p>
+                  </div>
+               </div>` 
+         })
+         
+         document.getElementById("product_table").innerHTML = htmlString
+      }
+
+      async function incrementAmount(id) {
+         const response = await fetch(`/increment-amount/${id}`);
+         refreshProducts();
+      }
+
+      async function decrementAmount(id) {
+         const response = await fetch(`/decrement-amount/${id}`);
+         refreshProducts();
+      }
+      async function deleteProduct(id) {
+      const response = await fetch(`/delete-amount/${id}`);
+         refreshProducts();
+      }
+
+      refreshProducts()
+
+      function addProduct() {
+         fetch("{% url 'main:add_product_ajax' %}", {
+               method: "POST",
+               body: new FormData(document.querySelector('#form'))
+         }).then(refreshProducts)
+
+         document.getElementById("form").reset()
+         return false
+      }
+
+      document.getElementById("button_add").onclick = addProduct
+   </script>
+
 </details>
 
 
