@@ -348,7 +348,6 @@ Padding adalah ruang di dalam elemen HTML, antara batas elemen dan kontennya sen
 - **Gunakan Bootstrap** jika ingin cepat membangun situs dengan desain yang konsisten dan tidak memiliki banyak waktu untuk menyesuaikan tampilan.
 - **Gunakan Tailwind CSS** jika ingin memiliki tingkat kontrol yang tinggi atas desain dan siap untuk menghabiskan waktu lebih dalam menyesuaikan tampilan yan di inginan. hal ini, Cocok untuk proyek-proyek yang membutuhkan desain yang sangat kustom.
 
-<<<<<<< HEAD
 ## jelaskan bagaimana kamu mengimplementasikan checklist
 - Pahami templat HTML yang sudah ada. dengan membagi ke beberapa bagian div
 - gunakan CSS biasa untuk customisasi sederhana dan gunakan Bootstrap untuk membuat navbar dan card
@@ -510,20 +509,12 @@ Oleh karena itu , menurut saya untuk memulai proyek baru sebaiknya menggunakan F
       document.getElementById("button_add").onclick = addProduct
    </script>
 
-=======
-# jelaskan bagaimana kamu mengimplementasikan checklist
-- Pahami templat HTML yang sudah ada. dengan membagi ke beberapa bagian div 
+6. melakukan git add , commit , push 
+7.  melakukan deployment 
 
-- gunakan CSS biasa untuk customisasi sederhana dan gunakan Bootstrap untuk membuat navbar dan card
+**link deployment**
+http://shirin-zarqaa-tugas.pbp.cs.ui.ac.id/
 
-- Kustomisasi halaman login dan register dengan elemen-elemen Bootstrap seperti form dan tombol.
-
-- Kustomisasi halaman daftar inventori dengan Cards dari Bootstrap untuk tampilan yang lebih menarik.
-
-- Sesuaikan warna, gaya, dan responsivitas desain sesuai dengan tema yang saya pilih .
-
-- mengecheck hasil pada local host 
->>>>>>> bdcb87af8be6e2f3c468974b620a9a83ddfaac79
 </details>
 
 
